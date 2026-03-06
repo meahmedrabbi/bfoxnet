@@ -33,7 +33,7 @@ const telegramColors = {
 // Common theme options
 const commonTheme: ThemeOptions = {
   shape: {
-    borderRadius: 10,
+    borderRadius: 6,
   },
   typography: {
     fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif',
@@ -52,7 +52,7 @@ const commonTheme: ThemeOptions = {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 10,
+          borderRadius: 6,
           padding: '8px 16px',
           boxShadow: 'none',
           '&:hover': {
@@ -70,7 +70,7 @@ const commonTheme: ThemeOptions = {
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 10,
+          borderRadius: 6,
           boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04)',
           border: '1px solid rgba(0, 0, 0, 0.06)',
         },
@@ -79,7 +79,7 @@ const commonTheme: ThemeOptions = {
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: 10,
+          borderRadius: 6,
         },
         elevation0: {
           boxShadow: 'none',
@@ -101,7 +101,7 @@ const commonTheme: ThemeOptions = {
     MuiChip: {
       styleOverrides: {
         root: {
-          borderRadius: 6,
+          borderRadius: 4,
         },
       },
     },
@@ -109,7 +109,7 @@ const commonTheme: ThemeOptions = {
       styleOverrides: {
         root: {
           '& .MuiOutlinedInput-root': {
-            borderRadius: 10,
+            borderRadius: 6,
           },
         },
       },
@@ -173,7 +173,7 @@ export const darkTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 10,
+          borderRadius: 6,
           boxShadow: 'none',
           border: '1px solid rgba(255, 255, 255, 0.08)',
         },

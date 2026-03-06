@@ -72,8 +72,6 @@ export default function LoginPage() {
     if (ok) router.replace('/');
   };
 
-  const brandGradient = `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`;
-
   return (
     <Box
       sx={{
@@ -81,9 +79,7 @@ export default function LoginPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: theme.palette.mode === 'dark'
-          ? 'linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%)'
-          : 'linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 50%, #e3f2fd 100%)',
+        bgcolor: 'background.default',
         p: 2,
       }}
     >
@@ -95,27 +91,22 @@ export default function LoginPage() {
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              width: 64,
-              height: 64,
-              borderRadius: 3,
-              background: brandGradient,
+              width: 56,
+              height: 56,
+              borderRadius: 2,
+              bgcolor: 'primary.main',
               mb: 2,
-              boxShadow: `0 8px 24px ${theme.palette.primary.main}40`,
             }}
           >
-            <Typography sx={{ fontSize: 28, fontWeight: 900, color: '#fff', fontFamily: 'monospace' }}>
+            <Typography sx={{ fontSize: 24, fontWeight: 900, color: '#fff', fontFamily: 'monospace' }}>
               B
             </Typography>
           </Box>
           <Typography
             variant="h4"
             fontWeight={800}
-            sx={{
-              background: brandGradient,
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              letterSpacing: '-0.5px',
-            }}
+            color="text.primary"
+            sx={{ letterSpacing: '-0.5px' }}
           >
             BFoxNet
           </Typography>
@@ -127,12 +118,9 @@ export default function LoginPage() {
         <Card
           elevation={0}
           sx={{
-            borderRadius: 4,
+            borderRadius: 3,
             border: `1px solid ${theme.palette.divider}`,
-            backdropFilter: 'blur(10px)',
-            background: theme.palette.mode === 'dark'
-              ? 'rgba(30,30,48,0.9)'
-              : 'rgba(255,255,255,0.95)',
+            bgcolor: 'background.paper',
           }}
         >
           <Tabs
@@ -208,8 +196,6 @@ export default function LoginPage() {
                     py: 1.5,
                     borderRadius: 2,
                     fontWeight: 700,
-                    background: brandGradient,
-                    '&:hover': { opacity: 0.9 },
                   }}
                 >
                   {isLoading ? 'Signing in…' : 'Sign In'}
@@ -347,8 +333,6 @@ export default function LoginPage() {
                     py: 1.5,
                     borderRadius: 2,
                     fontWeight: 700,
-                    background: brandGradient,
-                    '&:hover': { opacity: 0.9 },
                   }}
                 >
                   {isLoading ? 'Creating account…' : 'Create Account'}
